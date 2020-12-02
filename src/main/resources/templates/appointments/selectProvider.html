@@ -13,9 +13,9 @@
                 <h5 class="card-title"><span th:text="${provider.firstName +' ' +provider.lastName}"> Name
                             Lastname</span></h5>
                 <p sec:authorize="hasRole('ROLE_CUSTOMER_RETAIL')"
-                   th:text="${'Available works: '+ provider.getRetailWorks().size()}">Available works: 3</p>
+                   th:text="${'Available works: '+ provider.getRetailWorks().size()}">Available classes: 3</p>
                 <p sec:authorize="hasRole('ROLE_CUSTOMER_CORPORATE')"
-                   th:text="${'Available works: '+ provider.getCorporateWorks().size()}">Available works: 3</p>
+                   th:text="${'Available works: '+ provider.getCorporateWorks().size()}">Available classes: 3</p>
                 <a th:href="@{'/appointments/new/'+${provider.id}}" class="btn btn-primary">Select</a>
 
             </div>

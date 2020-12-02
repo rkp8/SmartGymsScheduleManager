@@ -13,13 +13,13 @@
                 <th> Name</th>
                 <th> E-mail</th>
                 <th> Appointments</th>
-                <th> Works</th>
+                <th> Classes</th>
                 <th> Action</th>
             </tr>
             </thead>
             <tbody>
             <tr th:if="${providers == null}">
-                <td colspan="4"> No Providers Available</td>
+                <td colspan="4"> No Trainers Available</td>
             </tr>
             <tr th:each="provider : ${providers}">
                 <td><span th:text="${provider.firstName +' ' + provider.lastName}"> Name Lastname </span></td>
@@ -39,7 +39,7 @@
 
 </div>
 <div class="row align-items-center justify-content-center" style="margin-top: 50px">
-    <a class="btn btn-primary" th:href="@{/providers/new}" role="button">New provider</a>
+    <a class="btn btn-primary" th:href="@{/providers/new}" role="button">New Trainer</a>
 </div>
 
 

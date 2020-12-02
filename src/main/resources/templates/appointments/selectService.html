@@ -17,10 +17,10 @@
                 </thead>
                 <tbody>
                 <tr th:if="${works == null}">
-                    <td colspan="4"> No works available</td>
+                    <td colspan="4"> No classes available</td>
                 </tr>
                 <tr th:each="work : ${works}">
-                    <td><span th:text="${work.name}"> work name </span></td>
+                    <td><span th:text="${work.name}"> Class name </span></td>
                     <td><span th:text="${work.duration }"> 30 min </span></td>
                     <td><span th:text="${work.price}"> 3 </span></td>
                     <td><a class="btn btn-primary"

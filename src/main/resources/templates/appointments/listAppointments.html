@@ -12,10 +12,10 @@
         <table id="appointments" class="table text-center">
             <thead class="thead-dark">
             <tr>
-                <th> Work</th>
+                <th> Class</th>
                 <th> Status</th>
                 <th> Start</th>
-                <th sec:authorize="!hasRole('ROLE_PROVIDER')"> Provider</th>
+                <th sec:authorize="!hasRole('ROLE_PROVIDER')"> Trainer</th>
                 <th sec:authorize="!hasRole('ROLE_CUSTOMER')"> Customer</th>
                 <th> Duration</th>
                 <th> Action</th>
