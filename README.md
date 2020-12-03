@@ -13,9 +13,9 @@ You can use the following credentials with live demo:
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
-| `provider` | provider |qwerty123 |
-| `corporate customer` | customer_c |qwerty123 |
-| `retail customer` | customer_r |qwerty123 |
+| `provider` | provider |123 |
+| `corporate customer` | customer_c |123 |
+| `retail customer` | customer_r |123 |
 
 
 ## Steps to Setup
