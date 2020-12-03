@@ -6,16 +6,16 @@
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
 
-The live demo of this app is deployed and can be found [here](https://appointmentscheudler.herokuapp.com/) 
+The live demo of this app is deployed and can be found [here](https://smartgym3.herokuapp.com/) 
 
 You can use the following credentials with live demo:
 
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
-| `provider` | provider |qwerty123 |
-| `corporate customer` | customer_c |qwerty123 |
-| `retail customer` | customer_r |qwerty123 |
+| `provider` | provider |123 |
+| `corporate customer` | customer_c |123 |
+| `retail customer` | customer_r |123 |
 
 
 ## Steps to Setup
