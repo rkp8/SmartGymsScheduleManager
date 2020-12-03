@@ -80,25 +80,6 @@
 
                     </div>
 
-                    <th:block th:if="${account_type =='customer_corporate'}">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="companyName">Company Name</label>
-                                <input type="text" class="form-control" th:classappend="${#fields.hasErrors('companyName') ? 'is-invalid' :''}" th:field="*{companyName}">
-                                <div th:if="${#fields.hasErrors('companyName')}" class="invalid-feedback">
-                                    <p th:errors="*{companyName}"></p>
-                                </div>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="vatNumber">VAT number</label>
-                                <input type="text" class="form-control" th:classappend="${#fields.hasErrors('vatNumber') ? 'is-invalid' :''}" th:field="*{vatNumber}">
-                                <div th:if="${#fields.hasErrors('vatNumber')}" class="invalid-feedback">
-                                    <p th:errors="*{vatNumber}"></p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </th:block>
 
 
                     <div class="form-row">
@@ -154,8 +135,8 @@
 
                     <th:block th:if="${account_type =='provider'}">
                         <div class="form-group">
-                            <p class="text-primary">retail customer target</p>
-                            <p class="text-info">corporate customer target</p>
+                            <p class="text-primary">Regular Members</p>
+                            <p class="text-info">Premium Members</p>
                             <label>Classes:</label>
                             <ul>
                                 <li th:each="work : ${allWorks}">

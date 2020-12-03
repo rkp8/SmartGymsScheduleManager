@@ -16,6 +16,14 @@
             <li class="nav-item" th:classappend="${activeLink} == 'account' ? 'active':''">
                 <a class="nav-link" th:href="@{'/providers/' + ${#authentication.principal.id}}">My account</a>
             </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymA">A</a></li>
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymB">B</a></li>
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymC">C</a></li>
+                </ul>
+            </li>
         </ul>
     </div>
 </th:block>

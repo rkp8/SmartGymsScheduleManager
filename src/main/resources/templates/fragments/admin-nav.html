@@ -14,10 +14,18 @@
                 <a class="nav-link" th:href="@{/providers/all}">Trainers</a>
             </li>
             <li class="nav-item" th:classappend="${activeLink} == 'customers' ? 'active':''">
-                <a class="nav-link" th:href="@{/customers/all}">Customers</a>
+                <a class="nav-link" th:href="@{/customers/all}">Members</a>
             </li>
             <li class="nav-item" th:classappend="${activeLink} == 'invoices' ? 'active':''">
                 <a class="nav-link" th:href="@{/invoices/all}">Invoices</a>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Location <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymA">A</a></li>
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymB">B</a></li>
+                    <li><a href="https://dashboard.heroku.com/apps/smartgymC">C</a></li>
+                </ul>
             </li>
         </ul>
     </div>

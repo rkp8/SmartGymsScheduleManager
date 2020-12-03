@@ -26,7 +26,7 @@
             noEventsMessage: 'Unavailable',
             validRange: function (nowDate) {
                 return {
-                    start: nowDate.clone().add(1, 'days')
+                    start: nowDate.clone().add(0, 'days')
                 };
             },
             header: {
@@ -37,7 +37,7 @@
             allDaySlot: false,
             minTime: "06:00:00",
             maxTime: "21:00:00",
-            firstDay: 2,
+            firstDay: 1,
             timeFormat: 'H:mm', // uppercase H for 24-hour clock
             eventSources: [
 

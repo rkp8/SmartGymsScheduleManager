@@ -115,6 +115,8 @@ public class ProviderController {
 
     @PostMapping("/availability")
     public String processProviderWorkingPlanUpdate(@ModelAttribute("plan") WorkingPlan plan) {
+
+
         workingPlanService.updateWorkingPlan(plan);
         return "redirect:/providers/availability";
     }
