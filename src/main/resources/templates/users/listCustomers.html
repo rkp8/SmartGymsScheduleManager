@@ -23,7 +23,7 @@
             </tr>
             <tr th:each="customer : ${customers}" th:classappend="${customer.getType()=='retail' ? 'table-primary' : 'table-info'}">
                 <td><span th:text="${customer.firstName +' ' + customer.lastName}"> Name Lastname </span></td>
-                <td><span th:text="${customer.getType() == 'retail'? 'retail':'corporate'}"> retail </span></td>
+                <td><span th:text="${customer.getType() == 'retail'? 'regular':'premium'}"> regular </span></td>
                 <td><span th:text="${customer.email }"> email </span></td>
                 <td><span th:text="${customer.appointments.size() }"> 3 </span></td>
                 <td><a class="btn btn-secondary" th:href="@{'/customers/' + ${customer.id}}"

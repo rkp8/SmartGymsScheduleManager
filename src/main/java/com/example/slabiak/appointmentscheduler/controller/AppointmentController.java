@@ -112,6 +112,7 @@ public class AppointmentController {
         if (currentUser.hasRole("ROLE_CUSTOMER_RETAIL")) {
             model.addAttribute("providers", userService.getProvidersWithRetailWorks());
         } else if (currentUser.hasRole("ROLE_CUSTOMER_CORPORATE")) {
+            model.addAttribute("providers", userService.getProvidersWithRetailWorks());
             model.addAttribute("providers", userService.getProvidersWithCorporateWorks());
         }
         return "appointments/selectProvider";
@@ -122,6 +123,7 @@ public class AppointmentController {
         if (currentUser.hasRole("ROLE_CUSTOMER_RETAIL")) {
             model.addAttribute("works", workService.getWorksForRetailCustomerByProviderId(providerId));
         } else if (currentUser.hasRole("ROLE_CUSTOMER_CORPORATE")) {
+            model.addAttribute("works", workService.getWorksForRetailCustomerByProviderId(providerId));
             model.addAttribute("works", workService.getWorksForCorporateCustomerByProviderId(providerId));
         }
         model.addAttribute(providerId);

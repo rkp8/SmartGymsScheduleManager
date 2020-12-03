@@ -27,8 +27,8 @@
             <tr th:each="work : ${works}"
                 th:classappend="${work.targetCustomer=='retail'} ? table-primary : table-info">
                 <td><span th:text="${work.name}"> english </span></td>
-                <td><span th:text="${work.targetCustomer}"> retail </span></td>
-                <td><span th:text="${work.price + ' PLN'}"> 50 PLN </span></td>
+                <td><span th:text="${work.targetCustomer == 'retail'? 'regular':'premium'}"> regular </span></td>
+                <td><span th:text="${'$' + work.price}"> $50 </span></td>
                 <td><span th:text="${work.duration+' min'}"> 30 min </span></td>
                 <td><span th:text="${work.providers.size()}"> 2 </span></td>
                 <td><a class="btn btn-secondary" th:href="@{'/works/' + ${work.id}}" role="button">Details</a>
