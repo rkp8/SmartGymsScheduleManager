@@ -6,7 +6,7 @@
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
 
-The live demo of this app is deployed and can be found [here](https://appointmentscheudler.herokuapp.com/) 
+The live demo of this app is deployed and can be found [here](https://smartgym3.herokuapp.com/) 
 
 You can use the following credentials with live demo:
 
