@@ -1,21 +1,21 @@
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/slabiak/AppointmentScheduler)
-# Appointment scheduler
+# ASmart Gyms Schedule Manager
 
->This is a Spring Boot Web Application to manage and schedule appointments between providers and customers. It has many features such as automatic invoicing, email notifications, appointments cancelation, providers individual working plans with brakes etc.
+>This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointments cancelation, providers individual working plans with brakes etc.
 
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
 
-The live demo of this app is deployed and can be found [here](https://smartgym3.herokuapp.com/) 
+The app is deployed and can be found [here](https://smartgymone.herokuapp.com/) 
 
 You can use the following credentials with live demo:
 
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
-| `provider` | provider |123 |
-| `corporate customer` | customer_c |123 |
-| `retail customer` | customer_r |123 |
+| `provider` | provider |qwerty123 |
+| `corporate customer` | customer_c |qwerty123 |
+| `retail customer` | customer_r |qwerty123 |
 
 
 ## Steps to Setup
@@ -130,16 +130,5 @@ Email templates can be found here: `src\main\resources\templates\email`
 * [Fullcalendar](https://fullcalendar.io/) - A JavaScript event calendar
 * [FlyingSaucer](https://github.com/flyingsaucerproject/flyingsaucer) - Used to generate invoice PDF
 * [jjwt](https://github.com/jwtk/jjwt) - Used to generate/validate JWT tokens
-
-## Contribute
-
-Let's together make AppointmentScheduler awesome!
-
-If you have any suggestions/ideas please feel free to write about it. You are also welcome to fork this project and send pull request with your changes.
-
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 
