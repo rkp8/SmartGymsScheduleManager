@@ -1,7 +1,14 @@
 [![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/slabiak/AppointmentScheduler)
-# ASmart Gyms Schedule Manager
+# Smart Gyms Schedule Manager
 
->This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointments cancelation, providers individual working plans with brakes etc.
+>This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancelation, trainer working plans etc.
+
+This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
+
+What sets this project apart is its ability to:
+-provide a live metric of the gym capacity
+-support multiple different franchise locations
+-allow trainers to adjust their time availabilty 
 
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
@@ -23,7 +30,7 @@ You can use the following credentials with live demo:
 **1. Clone the application**
 
 ```bash
-git clone https://github.com/slabiak/AppointmentScheduler.git
+git clone https://github.com/rkp8/SmartGymsScheduleManager.git
 ```
 
 **2. Create MySQL database**
