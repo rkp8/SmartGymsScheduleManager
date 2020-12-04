@@ -6,9 +6,12 @@
 This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
 
 What sets this project apart is its ability to:
--provide a live metric of the gym capacity
--support multiple different franchise locations
--allow trainers to adjust their time availabilty 
+
+  -provide a live metric of the gym capacity
+
+  -support multiple different franchise locations
+
+  -allow trainers to adjust their time availabilty 
 
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
