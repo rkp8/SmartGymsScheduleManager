@@ -14,6 +14,7 @@ What sets this project apart is its ability to:
   -allow trainers to adjust their time availabilty 
   
   -a refined U.I.
+  
 <a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
 ## Demo
 
