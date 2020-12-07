@@ -9,7 +9,7 @@ What sets this project apart is its ability to:
 
   -provide a live metric of the gym capacity
 
-  -support multiple different franchise locations
+  -support multiple franchise locations
 
   -allow trainers to adjust their time availabilty 
   
