@@ -82,7 +82,11 @@ To book a new appointment member needs to click `New Appointment` button on all 
 3. Choose one of the available dates and times
 4. Click book on confirmation page
 
-Available hours are calculatated with getAvailableHours function from AppointmentService:
+Live capacity is refreshed each time home page is loaded:
+
+This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time (EST). If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
+
+Available hours are calculated with getAvailableHours function from AppointmentService:
 
 `List<TimePeroid> getAvailableHours(int providerId,int customerId, int workId, LocalDate date)`
 
