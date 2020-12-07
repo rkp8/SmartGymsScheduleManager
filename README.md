@@ -1,6 +1,6 @@
 # Smart Gyms Schedule Manager
 
->This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancelation, trainer working plans etc.
+>This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancellation, trainer working plans etc.
 
 This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
 
