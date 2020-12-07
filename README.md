@@ -74,10 +74,10 @@ The app will start running at <http://localhost:8080>
 
 ## Booking process
 
-To book a new appointment customer needs to click `New Appointment` button on all appointments page and then:
+To book a new appointment member needs to click `New Appointment` button on all appointments page and then:
 
-1. Choose desired work from available works list
-2. Choose provider for selected work
+1. Choose desired class from available classes list
+2. Choose trainer for selected class
 3. Choose on of available date which is presented to him
 4. Click book on confirmation page
 
@@ -103,7 +103,7 @@ This function works as follow:
 | `finished` | system | Current date is after appointment end time  | current appointment status is `scheduled` and current date is after appointment end time|
 | `confirmed` | system | Current date is 24h after appointment end time  |current appointment status is `finished` and current date is more than 24h after appointment end time|
 | `invoiced` | system |Invoice for appointment is created | -|
-| `canceled` | customer |Customer clicks cancel button |current appointment status is `scheduled` and current date is not less than 24h before appointment start time and user total canceled appointments number for current month is not greater than 1|
+| `canceled` | customer |Member clicks cancel button |current appointment status is `scheduled` and current date is not less than 24h before appointment start time and user total canceled appointments number for current month is not greater than 1|
 | `rejection requested` | member |Member clicks reject button |current appointment status is `finished` and current date is not more than 24h after appointment end time|
 | `rejection accepted` | provider |Trainer clicks accept rejection button | current appointment status is `rejection requested`|
 
