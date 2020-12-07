@@ -30,48 +30,15 @@ You can use the following credentials with the demo:
 | `regular member` | customer_r |qwerty123 |
 
 
-## Steps to Setup
-
-**1. Clone the application**
-
-```bash
-git clone https://github.com/rkp8/SmartGymsScheduleManager.git
-```
-
-**2. Create MySQL database**
-```bash
-create database appointmentscheduler
-```
-- After that run MySQL script to create tables `src/main/resources/appointmentscheduler.sql`
-
-**3. Configure enviroment variables**
-
-+ open `src/main/resources/application.properties`
-+ set env variables for JDBC `dbURL`, `dbUsername`, `dbPassword`
-+ set env variables for mail server  `mailUsername`, `mailPassword`
-+ set jwtSecret, encoded with Base64 `jwtSecret`
-
-**4. Run the app using maven**
-
-```bash
-mvn spring-boot:run
-```
-The app will start running at <http://localhost:8080>
-
-**5. Login to admin account**
-+ username: `admin`
-+ password: `qwerty123`
-
-
 ## Account types 
 
-`admin` -  is created at database initialization. Admin can add new trainers,  classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
+`admin` -  Admin can add new trainers, classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
 
-`trainer` - can by created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
+`trainer` - can be created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
 
-`member regular` - registration page is public and can be created by everyone. Member can only book new appointments and manage them. This type of member sees only services which target regular member.
+`member regular` - registration page is public and can be visited by everyone. Member can book new appointments and manage them. This type of member sees only services which target regular member.
 
-`member premium` - almost the same as regular member. The only difference is that this type of account can only see services which target premium members.
+`member premium` - almost the same as a regular member. The only difference is that this type of account can see services which target premium members.
 
 ## Booking process
 
@@ -82,9 +49,9 @@ To book a new appointment member needs to click `New Appointment` button on all 
 3. Choose one of the available dates and times
 4. Click book on confirmation page
 
-Live capacity is refreshed each time home page is loaded:
+Live Gym Capacity is refreshed each time home page is loaded:
 
-This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time (EST). If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
+This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time in EST. If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
 
 Available hours are calculated with getAvailableHours function from AppointmentService:
 
