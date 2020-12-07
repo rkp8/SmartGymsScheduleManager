@@ -159,9 +159,9 @@ public class HomeController {
 
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
                 LocalDateTime start = LocalDateTime.parse(starts1[i], formatter);
-                start = start.minus(5, ChronoUnit.HOURS);
+                start = start.plus(5, ChronoUnit.HOURS);
                 LocalDateTime end = LocalDateTime.parse(ends1[i], formatter);
-                end = end.minus(5, ChronoUnit.HOURS);
+                end = end.plus(5, ChronoUnit.HOURS);
 
                 if(LocalDateTime.now().isAfter(start) && LocalDateTime.now().isBefore(end))
                     inclass-=1;
