@@ -14,7 +14,8 @@ This project is based on the work of Slabiak: https://github.com/slabiak/Appoint
     -Allow trainers to adjust their time availabilty
     
     -A refined U.I.
-  
+    
+    <br></br>
 <img width="1116" alt="Screen Shot 2020-12-07 at 1 13 48 PM" src="https://user-images.githubusercontent.com/60204834/101388518-155f2300-388e-11eb-9b2d-1af145a03d60.png">
 
 ## Demo
