@@ -14,7 +14,8 @@ What sets this project apart is its ability to:
   
   -a refined U.I.
   
-<a href="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true"><img src="https://github.com/slabiak/slabiak.github.io/blob/master/images/appointmentscheduler/calendar.png?raw=true" width="600"></a>
+<img width="1116" alt="Screen Shot 2020-12-07 at 1 13 48 PM" src="https://user-images.githubusercontent.com/60204834/101388518-155f2300-388e-11eb-9b2d-1af145a03d60.png">
+
 ## Demo
 
 The app is deployed and can be found [here](https://smartgymone.herokuapp.com/) 
