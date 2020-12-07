@@ -26,8 +26,8 @@ You can use the following credentials with live demo:
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
 | `provider` | provider |qwerty123 |
-| `corporate customer` | customer_c |qwerty123 |
-| `retail customer` | customer_r |qwerty123 |
+| `premium customer` | customer_c |qwerty123 |
+| `regular customer` | customer_r |qwerty123 |
 
 
 ## Steps to Setup
@@ -65,13 +65,13 @@ The app will start running at <http://localhost:8080>
 
 ## Account types 
 
-`admin` -  is created at database initialization. Admin can add new providers,  services and assign services to providers. Admin can see list of all: appointments, providers, customers, invoices. He can also issue invoices manually for all confirmed appointments.
+`admin` -  is created at database initialization. Admin can add new trainers,  classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
 
-`provider` - can by created by admin only. Provider can set his own working plan, add brakes to that working plan and change his available services. Provider sees only his own appointments.
+`provider` - can by created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
 
-`customer retail` - registration page is public and can be created by everyone. Customer can only book new appointments and manage them. This type of customer sees only services which targets retail customer.
+`customer retail` - registration page is public and can be created by everyone. Customer can only book new appointments and manage them. This type of customer sees only services which target regular customers.
 
-`customer corporate` - almost the same as retail customer. The only difference is that this type of account needs to provide VAT number and Company Name and can see only services which targets corporrate customer.
+`customer premium` - almost the same as regular customer. The only difference is that this type of account can only see services which target premium customers.
 
 ## Booking process
 
@@ -87,12 +87,12 @@ Available hours are calculatated with getAvailableHours function from Appointmen
 `List<TimePeroid> getAvailableHours(int providerId,int customerId, int workId, LocalDate date)`
 
 This function works as follow:
-1. gets selected provider working plan
+1. gets selected trainer working plan
 2. gets working hours from working plan for selected day 
-3. excludes all brakes from working hours
-4. excludes all providers booked appointments for that day
-5. excludes all customers booked appointments for that day
-6. gets selected work duration and calculate available time peroids 
+3. excludes all breaks from working hours
+4. excludes all trainer-booked appointments for that day
+5. excludes all member-booked appointments for that day
+6. gets selected work duration and calculate available time periods 
 7. returns available hours
 
 ## Appointments lifecycle
@@ -105,8 +105,8 @@ This function works as follow:
 | `confirmed` | system | Current date is 24h after appointment end time  |current appointment status is `finished` and current date is more than 24h after appointment end time|
 | `invoiced` | system |Invoice for appointment is created | -|
 | `canceled` | customer |Customer clicks cancel button |current appointment status is `scheduled` and current date is not less than 24h before appointment start time and user total canceled appointments number for current month is not greater than 1|
-| `rejection requested` | customer |Customer clicks reject button |current appointment status is `finished` and current date is not more than 24h after appointment end time|
-| `rejection accepted` | provider |Provider clicks accept rejection button | current appointment status is `rejection requested`|
+| `rejection requested` | member |Member clicks reject button |current appointment status is `finished` and current date is not more than 24h after appointment end time|
+| `rejection accepted` | provider |Trainer clicks accept rejection button | current appointment status is `rejection requested`|
 
 **2. Normal appointment lifecycle is:**
 
@@ -117,12 +117,12 @@ This function works as follow:
 
 **3. Appointment rejection**
 
-After appointment status is changed to finished system automatically sends email to customer with information that appointment is finished. In case that the appointment didn't take place there is also a link attached to that email that allows customer to reject that the appointment didn't take place. That link is valid for 24h after appointment finished time. If user will no click that link then appointment status will be automatically chaned to confirmed after 24h and invoiced at the 1st day of next month. If user will click that link an email is send to provider that his customer requested rejection. If provied will accept that rejection then appointment status will be changed to rejection accepted and appointment will be not invoiced.
+After appointment status is changed to finished system automatically sends email to member with information that appointment is finished. In case that the appointment didn't take place there is also a link attached to that email that allows member to reject that the appointment didn't take place. That link is valid for 24h after appointment finished time. If user will no click that link then appointment status will be automatically chaned to confirmed after 24h and invoiced at the 1st day of next month. If user will click that link an email is send to trainer that his member requested rejection. If provied will accept that rejection then appointment status will be changed to rejection accepted and appointment will be not invoiced.
 
 
 **4. Apppointment cancellation**
 
-Every appointment can be canceled by customer or provider. Customer is allowed to cancel 1 appointment in a month no less than 24h before appointment start date. Provider is allowed to cancel his appointments without any limit as long as the appointment status is `scheduled`. 
+Every appointment can be canceled by member or trainer. Member is allowed to cancel 1 appointment in a month no less than 24h before appointment start date. Trainer is allowed to cancel his appointments without any limit as long as the appointment status is `scheduled`. 
 
 ## Notifications
 **1. An email notification is sent when:**
