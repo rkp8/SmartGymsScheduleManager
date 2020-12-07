@@ -1,4 +1,3 @@
-[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=shield)](https://circleci.com/gh/slabiak/AppointmentScheduler)
 # Smart Gyms Schedule Manager
 
 >This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancelation, trainer working plans etc.
