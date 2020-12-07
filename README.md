@@ -5,7 +5,7 @@
 This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
 
 
-What sets this project apart is its ability to:
+<b>What sets this project apart is its ability to:</b>
     
     -Provide a live metric of the gym capacity
     
