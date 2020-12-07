@@ -25,7 +25,7 @@ You can use the following credentials with live demo:
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
-| `provider` | provider |qwerty123 |
+| `trainer` | provider |qwerty123 |
 | `premium member` | customer_c |qwerty123 |
 | `regular member` | customer_r |qwerty123 |
 
