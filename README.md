@@ -22,13 +22,32 @@ The app is deployed and can be found [here](https://smartgymone.herokuapp.com/)
 
 You can use the following credentials with the demo:
 
+Location A (Default):
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
 | `trainer` | provider |qwerty123 |
+| `trainer` | trainerB |qwerty123 |
 | `premium member` | customer_c |qwerty123 |
 | `regular member` | customer_r |qwerty123 |
 
+Location B:
+| Account type | Username | Password 
+| --- | --- | --- |
+| `admin` | admin | qwerty123 |
+| `trainer` | jdoe |qwerty123 |
+| `trainer` | yogamaster |qwerty123 |
+| `premium member` | member1 |qwerty123 |
+| `regular member` | mem2 |qwerty123 |
+
+Location C:
+| Account type | Username | Password 
+| --- | --- | --- |
+| `admin` | admin | qwerty123 |
+| `trainer` | CardioMaster |qwerty123 |
+| `trainer` | SwimInstructor |qwerty123 |
+| `premium member` | mem2 |qwerty123 |
+| `regular member` | mem1 |qwerty123 |
 
 ## Account types 
 
