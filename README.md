@@ -20,7 +20,7 @@ What sets this project apart is its ability to:
 
 The app is deployed and can be found [here](https://smartgymone.herokuapp.com/) 
 
-You can use the following credentials with live demo:
+You can use the following credentials with the demo:
 
 | Account type | Username | Password 
 | --- | --- | --- |
@@ -78,8 +78,8 @@ The app will start running at <http://localhost:8080>
 To book a new appointment member needs to click `New Appointment` button on all appointments page and then:
 
 1. Choose desired class from available classes list
-2. Choose trainer for selected class
-3. Choose on of available date which is presented to him
+2. Choose trainer for the selected class
+3. Choose one of the available dates and times
 4. Click book on confirmation page
 
 Available hours are calculatated with getAvailableHours function from AppointmentService:
