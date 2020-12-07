@@ -66,11 +66,11 @@ The app will start running at <http://localhost:8080>
 
 `admin` -  is created at database initialization. Admin can add new trainers,  classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
 
-`provider` - can by created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
+`trainer` - can by created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
 
-`customer retail` - registration page is public and can be created by everyone. Customer can only book new appointments and manage them. This type of customer sees only services which target regular customers.
+`member regular` - registration page is public and can be created by everyone. Member can only book new appointments and manage them. This type of member sees only services which target regular member.
 
-`customer premium` - almost the same as regular customer. The only difference is that this type of account can only see services which target premium customers.
+`member premium` - almost the same as regular member. The only difference is that this type of account can only see services which target premium members.
 
 ## Booking process
 
