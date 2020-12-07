@@ -104,7 +104,7 @@ This function works as follow:
 | `finished` | system | Current date is after appointment end time  | current appointment status is `scheduled` and current date is after appointment end time|
 | `confirmed` | system | Current date is 24h after appointment end time  |current appointment status is `finished` and current date is more than 24h after appointment end time|
 | `invoiced` | system |Invoice for appointment is created | -|
-| `canceled` | customer |Member clicks cancel button |current appointment status is `scheduled` and current date is not less than 24h before appointment start time and user total canceled appointments number for current month is not greater than 1|
+| `canceled` | member |Member clicks cancel button |current appointment status is `scheduled` and current date is not less than 24h before appointment start time and user total canceled appointments number for current month is not greater than 1|
 | `rejection requested` | member |Member clicks reject button |current appointment status is `finished` and current date is not more than 24h after appointment end time|
 | `rejection accepted` | provider |Trainer clicks accept rejection button | current appointment status is `rejection requested`|
 
@@ -115,12 +115,8 @@ This function works as follow:
 3. confirmed - after system time is more than 24h after appointment end time and user didn't request rejection
 4. invoiced - after invoiced is issued automatically on the 1st day of next month
 
-**3. Appointment rejection**
 
-After appointment status is changed to finished system automatically sends email to member with information that appointment is finished. In case that the appointment didn't take place there is also a link attached to that email that allows member to reject that the appointment didn't take place. That link is valid for 24h after appointment finished time. If user will no click that link then appointment status will be automatically chaned to confirmed after 24h and invoiced at the 1st day of next month. If user will click that link an email is send to trainer that his member requested rejection. If provied will accept that rejection then appointment status will be changed to rejection accepted and appointment will be not invoiced.
-
-
-**4. Apppointment cancellation**
+**3. Apppointment cancellation**
 
 Every appointment can be canceled by member or trainer. Member is allowed to cancel 1 appointment in a month no less than 24h before appointment start date. Trainer is allowed to cancel his appointments without any limit as long as the appointment status is `scheduled`. 
 
@@ -128,7 +124,7 @@ Every appointment can be canceled by member or trainer. Member is allowed to can
 **1. An email notification is sent when:**
 
 + appointment is finished
-+ appointment rejection is rquested
++ appointment rejection is requested
 + appointment rejection is accepted
 + new appointment is created
 + appointment is canceled
