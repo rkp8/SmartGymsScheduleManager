@@ -26,8 +26,8 @@ You can use the following credentials with live demo:
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
 | `provider` | provider |qwerty123 |
-| `premium customer` | customer_c |qwerty123 |
-| `regular customer` | customer_r |qwerty123 |
+| `premium member` | customer_c |qwerty123 |
+| `regular member` | customer_r |qwerty123 |
 
 
 ## Steps to Setup
