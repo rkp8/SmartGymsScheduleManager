@@ -104,7 +104,7 @@ This function works as follow:
 
 | Status | Set by | When | Condition |
 | --- | --- | --- | -- |
-| `scheudled` |system | New appointment is created | -|
+| `scheduled` |system | New appointment is created | -|
 | `finished` | system | Current date is after appointment end time  | current appointment status is `scheduled` and current date is after appointment end time|
 | `confirmed` | system | Current date is 24h after appointment end time  |current appointment status is `finished` and current date is more than 24h after appointment end time|
 | `invoiced` | system |Invoice for appointment is created | -|
