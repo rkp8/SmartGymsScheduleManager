@@ -74,6 +74,8 @@ To book a new appointment, members start by clicking the `New Appointment` butto
 4. Click book button on the confirmation page
 
 <b>Notable Functions: </b>
+<br />
+
 Live Gym Capacity is refreshed each time home page is loaded:
 
 This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time in EST. If it does, then the initial max capacity is decremented by 1. The initial max capacity can be specified by the gym owner. In the demo, it is set to 30. 
