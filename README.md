@@ -30,6 +30,7 @@ Location A (Default):
 | `admin` | admin | qwerty123 |
 | `trainer` | provider |qwerty123 |
 | `trainer` | trainerB |qwerty123 |
+| `trainer` | trainerC |qwerty123 |
 | `premium member` | customer_c |qwerty123 |
 | `regular member` | customer_r |qwerty123 |
 
