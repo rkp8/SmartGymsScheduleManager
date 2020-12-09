@@ -66,7 +66,7 @@ Location C:
 
 ## Booking process
 
-To book a new appointment member needs to click `New Appointment` button on all appointments page and then:
+To book a new appointment, members start by clicking the `New Appointment` button on the all appointments page. They must then:
 
 1. Choose a desired class from the list of available classes
 2. Choose a trainer for the selected class
@@ -76,7 +76,7 @@ To book a new appointment member needs to click `New Appointment` button on all 
 <b>Notable Functions: </b>
 Live Gym Capacity is refreshed each time home page is loaded:
 
-This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time in EST. If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
+This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time in EST. If it does, then the initial max capacity is decremented by 1. The initial max capacity can be specified by the gym owner. In the demo, it is set to 30. 
 
 Available hours are calculated with getAvailableHours function from AppointmentService:
 
