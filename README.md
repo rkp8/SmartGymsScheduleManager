@@ -56,7 +56,7 @@ Location C:
 
 ## Account types 
 
-`admin` -  Adds new trainers and classes. Can assign classes to trainers. Can see list of all: appointments, trainers, members, invoices. 
+`admin` -  Adds new trainers and classes. Assigns classes to trainers. Sees list of all: appointments, trainers, members, invoices. 
 
 `trainer` -  Creates a working plan, add breaks to that working plan and change the classes they teach.
 
