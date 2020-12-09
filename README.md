@@ -2,9 +2,6 @@
 
 >A Web Application to manage and schedule appointments between gym trainers and members. It has many features such as live gym capacity, automatic invoicing, email notifications, appointment cancellation, trainer working plans etc.
 
-This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
-
-
 <b>What sets this project apart is its ability to:</b>
     
     -Provide a live metric of the gym capacity
@@ -136,4 +133,4 @@ Email templates can be found here: `src\main\resources\templates\email`
 * [FlyingSaucer](https://github.com/flyingsaucerproject/flyingsaucer) - Used to generate invoice PDF
 * [jjwt](https://github.com/jwtk/jjwt) - Used to generate/validate JWT tokens
 
-
+This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
