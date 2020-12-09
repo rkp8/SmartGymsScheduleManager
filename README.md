@@ -2,7 +2,7 @@
 
 >A web application to manage and schedule appointments between gym trainers and members. It offers live monitoring of gym capacity, email notifications, appointment cancellation, trainer working plans and more.
 
-<b>What sets this project apart is its ability to:</b>
+<b>What sets this project apart from existing scheduling systems is its ability to:</b>
     
     -Provide a live metric of the gym capacity
     
