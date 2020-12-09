@@ -69,7 +69,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendAppointmentFinishedNotification(Appointment appointment) {
         Context context = new Context();
         context.setVariable("appointment", appointment);
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/reject?token=" + jwtTokenService.generateAppointmentRejectionToken(appointment));
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/reject?token=" + jwtTokenService.generateAppointmentRejectionToken(appointment));
         sendEmail(appointment.getCustomer().getEmail(), "Finished appointment summary", "appointmentFinished", context, null);
     }
 
@@ -78,7 +78,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendAppointmentRejectionRequestedNotification(Appointment appointment) {
         Context context = new Context();
         context.setVariable("appointment", appointment);
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/acceptRejection?token=" + jwtTokenService.generateAcceptRejectionToken(appointment));
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/acceptRejection?token=" + jwtTokenService.generateAcceptRejectionToken(appointment));
         sendEmail(appointment.getProvider().getEmail(), "Rejection requested", "appointmentRejectionRequested", context, null);
     }
 
@@ -137,7 +137,7 @@ public class EmailServiceImpl implements EmailService {
         User recipent = chatMessage.getAuthor() == chatMessage.getAppointment().getProvider() ? chatMessage.getAppointment().getCustomer() : chatMessage.getAppointment().getProvider();
         context.setVariable("recipent", recipent);
         context.setVariable("appointment", chatMessage.getAppointment());
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/" + chatMessage.getAppointment().getId());
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/" + chatMessage.getAppointment().getId());
         sendEmail(recipent.getEmail(), "New chat message", "newChatMessage", context, null);
     }
 
@@ -147,7 +147,7 @@ public class EmailServiceImpl implements EmailService {
         Context context = new Context();
         context.setVariable("oldAppointment", oldAppointment);
         context.setVariable("newAppointment", newAppointment);
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/" + newAppointment.getId());
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/" + newAppointment.getId());
         sendEmail(newAppointment.getCustomer().getEmail(), "New Appointment Exchange Request", "newExchangeRequest", context, null);
     }
 
@@ -155,7 +155,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendExchangeRequestAcceptedNotification(ExchangeRequest exchangeRequest) {
         Context context = new Context();
         context.setVariable("exchangeRequest", exchangeRequest);
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/" + exchangeRequest.getRequested().getId());
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/" + exchangeRequest.getRequested().getId());
         sendEmail(exchangeRequest.getRequested().getCustomer().getEmail(), "Exchange request accepted", "exchangeRequestAccepted", context, null);
     }
 
@@ -163,7 +163,7 @@ public class EmailServiceImpl implements EmailService {
     public void sendExchangeRequestRejectedNotification(ExchangeRequest exchangeRequest) {
         Context context = new Context();
         context.setVariable("exchangeRequest", exchangeRequest);
-        context.setVariable("url", "https://smartgymone.herokuapp.com/appointments/" + exchangeRequest.getRequestor().getId());
+        context.setVariable("url", "https://smartgymthree.herokuapp.com/appointments/" + exchangeRequest.getRequestor().getId());
         sendEmail(exchangeRequest.getRequestor().getCustomer().getEmail(), "Exchange request rejected", "exchangeRequestRejected", context, null);
     }
 }
