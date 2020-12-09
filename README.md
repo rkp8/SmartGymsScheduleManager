@@ -74,7 +74,6 @@ To book a new appointment, members start by clicking the `New Appointment` butto
 4. Click book button on the confirmation page
 
 ## Notable Functions:
-<br />
 
 Live Gym Capacity is refreshed each time home page is loaded:
 
