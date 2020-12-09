@@ -1,19 +1,21 @@
 # Smart Gyms Schedule Manager
 
->This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancelation, trainer working plans etc.
+>This is a Spring Boot Web Application to manage and schedule appointments between gym trainers and members. It has many features such as automatic invoicing, email notifications, appointment cancellation, trainer working plans etc.
 
 This project is based on the work of Slabiak: https://github.com/slabiak/AppointmentScheduler.git
 
-What sets this project apart is its ability to:
 
-  -provide a live metric of the gym capacity
-
-  -support multiple franchise locations
-
-  -allow trainers to adjust their time availabilty 
-  
-  -a refined U.I.
-  
+<b>What sets this project apart is its ability to:</b>
+    
+    -Provide a live metric of the gym capacity
+    
+    -Support multiple franchise locations
+    
+    -Allow trainers to adjust their time availabilty
+    
+    -A refined U.I.
+    
+<br />
 <img width="1116" alt="Screen Shot 2020-12-07 at 1 13 48 PM" src="https://user-images.githubusercontent.com/60204834/101388518-155f2300-388e-11eb-9b2d-1af145a03d60.png">
 
 ## Demo
@@ -22,56 +24,42 @@ The app is deployed and can be found [here](https://smartgymone.herokuapp.com/)
 
 You can use the following credentials with the demo:
 
+Location A (Default):
 | Account type | Username | Password 
 | --- | --- | --- |
 | `admin` | admin | qwerty123 |
 | `trainer` | provider |qwerty123 |
+| `trainer` | trainerB |qwerty123 |
 | `premium member` | customer_c |qwerty123 |
 | `regular member` | customer_r |qwerty123 |
 
+Location B:
+| Account type | Username | Password 
+| --- | --- | --- |
+| `admin` | admin | qwerty123 |
+| `trainer` | jdoe |qwerty123 |
+| `trainer` | yogamaster |qwerty123 |
+| `premium member` | member1 |qwerty123 |
+| `regular member` | mem2 |qwerty123 |
 
-## Steps to Setup
-
-**1. Clone the application**
-
-```bash
-git clone https://github.com/rkp8/SmartGymsScheduleManager.git
-```
-
-**2. Create MySQL database**
-```bash
-create database appointmentscheduler
-```
-- After that run MySQL script to create tables `src/main/resources/appointmentscheduler.sql`
-
-**3. Configure enviroment variables**
-
-+ open `src/main/resources/application.properties`
-+ set env variables for JDBC `dbURL`, `dbUsername`, `dbPassword`
-+ set env variables for mail server  `mailUsername`, `mailPassword`
-+ set jwtSecret, encoded with Base64 `jwtSecret`
-
-**4. Run the app using maven**
-
-```bash
-mvn spring-boot:run
-```
-The app will start running at <http://localhost:8080>
-
-**5. Login to admin account**
-+ username: `admin`
-+ password: `qwerty123`
-
+Location C:
+| Account type | Username | Password 
+| --- | --- | --- |
+| `admin` | admin | qwerty123 |
+| `trainer` | CardioMaster |qwerty123 |
+| `trainer` | SwimInstructor |qwerty123 |
+| `premium member` | mem2 |qwerty123 |
+| `regular member` | mem1 |qwerty123 |
 
 ## Account types 
 
-`admin` -  is created at database initialization. Admin can add new trainers,  classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
+`admin` -  Admin can add new trainers, classes and assign classes to trainers. Admin can see list of all: appointments, trainers, members, invoices. He can also issue invoices manually for all confirmed appointments.
 
-`trainer` - can by created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
+`trainer` - can be created by admin only. Trainers can set their own working plan, add breaks to that working plan and change the classes they teach.
 
-`member regular` - registration page is public and can be created by everyone. Member can only book new appointments and manage them. This type of member sees only services which target regular member.
+`member regular` - registration page is public and can be visited by everyone. Member can book new appointments and manage them. This type of member sees only services which target regular member.
 
-`member premium` - almost the same as regular member. The only difference is that this type of account can only see services which target premium members.
+`member premium` - almost the same as a regular member. The only difference is that this type of account can see services which target premium members.
 
 ## Booking process
 
@@ -82,9 +70,9 @@ To book a new appointment member needs to click `New Appointment` button on all 
 3. Choose one of the available dates and times
 4. Click book on confirmation page
 
-Live capacity is refreshed each time home page is loaded:
+Live Gym Capacity is refreshed each time home page is loaded:
 
-This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time (EST). If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
+This is done by retrieving the start and end time for every scheduled class and checking to see if this interval contains the current time in EST. If it does, then the initial max capacity is decremented by 1. The initial value can be specified by the gym owner. In the demo, the initial max capacity is set to 30. 
 
 Available hours are calculated with getAvailableHours function from AppointmentService:
 
@@ -104,7 +92,7 @@ This function works as follow:
 
 | Status | Set by | When | Condition |
 | --- | --- | --- | -- |
-| `scheudled` |system | New appointment is created | -|
+| `scheduled` |system | New appointment is created | -|
 | `finished` | system | Current date is after appointment end time  | current appointment status is `scheduled` and current date is after appointment end time|
 | `confirmed` | system | Current date is 24h after appointment end time  |current appointment status is `finished` and current date is more than 24h after appointment end time|
 | `invoiced` | system |Invoice for appointment is created | -|
