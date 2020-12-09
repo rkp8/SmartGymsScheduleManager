@@ -12,6 +12,8 @@
     
     -A refined U.I.
     
+    -Captcha verification login
+    
 <br />
 <img width="1316" alt="Screen Shot 2020-12-09 at 11 50 28 AM" src="https://user-images.githubusercontent.com/60204834/101660788-91d03e00-3a15-11eb-936c-fa2822515a1b.png">
 
@@ -111,7 +113,7 @@ This function works as follow:
 4. invoiced - after invoiced is issued automatically on the 1st day of the next month
 
 
-**3. Apppointment cancellation**
+**3. Appointment cancellation**
 
 Appointments can be canceled by a member or trainer (if cancellable option specified by admin). Members are only allowed to cancel one appointment each month, no less than 24h before appointment start date. Trainers are allowed to cancel their appointments without any limit as long as the appointment status is `scheduled`. 
 
