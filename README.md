@@ -18,6 +18,7 @@ This project is based on the work of Slabiak: https://github.com/slabiak/Appoint
 <br />
 <img width="1320" alt="Screen Shot 2020-12-09 at 11 50 28 AM" src="https://user-images.githubusercontent.com/60204834/101660464-32722e00-3a15-11eb-8d71-5ce8458d3b2e.png">
 
+<img width="1042" alt="Screen Shot 2020-12-09 at 11 53 30 AM" src="https://user-images.githubusercontent.com/60204834/101660581-55044700-3a15-11eb-9d63-3c70d7b85438.png">
 
 
 ## Demo
