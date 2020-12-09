@@ -60,7 +60,7 @@ Location C:
 
 `trainer` -  Creates a working plan, add breaks to that working plan and change the classes they teach.
 
-`member regular` -  Books new appointments and manage them. Sees only classes which target regular members.
+`member regular` -  Books new appointments and manages them. Sees only classes which target regular members.
 
 `member premium` - Same as regular member except can only see classes which target premium members.
 
