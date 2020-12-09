@@ -133,4 +133,4 @@ Email templates can be found here: `src\main\resources\templates\email`
 * [FlyingSaucer](https://github.com/flyingsaucerproject/flyingsaucer) - Used to generate invoice PDF
 * [jjwt](https://github.com/jwtk/jjwt) - Used to generate/validate JWT tokens
 
-This project is based on the work of Slabiak under the open source MIT license: https://github.com/slabiak/AppointmentScheduler.git
+This project is based on the work of Slabiak under the MIT open source license: https://github.com/slabiak/AppointmentScheduler.git
