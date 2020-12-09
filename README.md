@@ -1,6 +1,6 @@
 # Smart Gyms Schedule Manager
 
->A Web Application to manage and schedule appointments between gym trainers and members. It has live monitoring of gym capacity, automatic invoicing, email notifications, appointment cancellation, trainer working plans etc.
+>A web application to manage and schedule appointments between gym trainers and members. It has live monitoring of gym capacity, automatic invoicing, email notifications, appointment cancellation, trainer working plans etc.
 
 <b>What sets this project apart is its ability to:</b>
     
