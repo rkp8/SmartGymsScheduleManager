@@ -56,11 +56,11 @@ Location C:
 
 ## Account types 
 
-`admin` -  Can add new trainers and classes. Can assign classes to trainers. Can see list of all: appointments, trainers, members, invoices. 
+`admin` -  Adds new trainers and classes. Can assign classes to trainers. Can see list of all: appointments, trainers, members, invoices. 
 
-`trainer` -  Can set their own working plan, add breaks to that working plan and change the classes they teach.
+`trainer` -  Creates a working plan, add breaks to that working plan and change the classes they teach.
 
-`member regular` -  Can book new appointments and manage them. Sees only classes which target regular members.
+`member regular` -  Books new appointments and manage them. Sees only classes which target regular members.
 
 `member premium` - Same as regular member except can only see classes which target premium members.
 
